@@ -1,0 +1,103 @@
+/*global styles and variables*/
+html
+{
+    height:100%;
+    --big-icon-size:5rem;
+    --mid-icon-size:3rem;
+    --small-icon-size:1.5rem;
+    --header-height:4rem;
+}
+
+/*Icon styles (to be used on buttons containing icons)*/
+.big-icon, .mid-icon, .small-icon
+{
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.1s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.big-icon:hover, .mid-icon:hover, .small-icon:hover
+{
+    transform: scale(1.1);
+}
+
+.big-icon:active, .mid-icon:active, .small-icon:active
+{
+    transform: scale(0.9);
+}
+
+.big-icon
+{
+    font-size: calc(var(--big-icon-size)/2);
+    width:var(--big-icon-size);
+    height:var(--big-icon-size);
+}
+
+.mid-icon
+{
+    font-size: calc(var(--mid-icon-size)/2);
+    width:var(--mid-icon-size);
+    height:var(--mid-icon-size);
+}
+
+.small-icon
+{
+    font-size: calc(var(--mid-icon-size)/2);
+    width:var(--mid-icon-size);
+    height:var(--mid-icon-size);
+}
+
+/*Log in and registration styles*/
+.auth-form-parent
+{
+    width:100%;
+    height:100%;
+    position:fixed;
+}
+.auth-form-container
+{
+    max-width:20rem;
+    height:100%;
+}
+
+/*Footer and header styles*/
+
+footer
+{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 10rem;
+    background-color: rgba(0, 0, 0, 0); /* transparent */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: var(--header-height);
+    background-color: var(--bs-body-bg);
+    box-shadow: 0 2px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.first-container
+{
+    /*assign this class to the first container
+    in a page that has a header, in order to
+    make sure that the header doesn't overlay it*/
+    margin-top: calc(var(--header-height) + 1rem);
+}
+  
