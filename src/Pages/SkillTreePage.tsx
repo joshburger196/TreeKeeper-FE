@@ -3,7 +3,7 @@ import { getSkillTreeById, getSkillById } from '../assets/staticDevData';
 import HeaderBar from "../components/HeaderBar";
 import SkillDetailPage from "./SkillDetailPage";
 import CenterFocusFooter from "../components/CenterFocusFooter";
-import SkillEditPage from "./SkillEditPage";
+import CreateSkillPage from "./CreateSkillPage";
 
 const SkillTreePage = () => {
   const navigate=useNavigate()
@@ -44,7 +44,7 @@ const SkillTreePage = () => {
         <CenterFocusFooter mainFunction={handleAddSkill} mainIcon="plus"></CenterFocusFooter>
         </>
       }/>
-      <Route path="new" element={<SkillEditPage />} />
+      <Route path="new" element={<CreateSkillPage />} />
       <Route path=":skid/*" element={<SkillDetailPage />} />
     </Routes>
     </> 
